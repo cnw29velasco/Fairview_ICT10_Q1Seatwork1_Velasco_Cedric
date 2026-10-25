@@ -1,32 +1,21 @@
-from pyscript import document, display
+#Seatwork 1
 
+from pyscript import display
 
-def add_name(e):
+fullname = 'Cedric Emanuel P. Velasco' # string
 
-    first = document.getElementById('first').value  #first name
-    last = document.getElementById('last').value    #last name
-    full = first + ' ' + last + '(The newest member), ' #full name
+ag3_s = 15 # integer
 
-    document.getElementById("output1").innerHTML = "" #clears the response after answering
+Height = 171 # integer
 
-    #list of all the members
-    g10 = {"Logan Anaque, ", "Jacob Minguillo, ", "Gavin Ruiz, "}
-    g9 = {"Robert Junior, ", "Boberto Junior, ", "Robertido Junior, "}
-    g8 = {"Rick Grayson, ", "Bruce Wayne, ", "Clark Kent, "}  
-    g7 = {"Wally West, ", "Barry Allen, ", "Oliver Queen, "}
+Countries = ['France, England, Canada'] # list
 
-    #combined the list of all the members
-    all_members = g10.union(g9, g8, g7)
-    all_members.add(full)
+student_type = False # boolean
 
-    #number of members
-    combined_members = len(all_members)
+Information = {'favorite_color':'blue', 'car_brand':'toyota', 'shoe_size':8, 'best_friend': 'Johanna Maria Ramos'} #dictionary
 
-    #the variable of the message
-    message = full + ", you are officially a new member of ICT Club, joined by, "
+Fruits = set(['mango','strawberry','blueberry','rassberry','watermelon']) #set
 
-    #it displays the message
-    display(message + "".join(sorted(all_members)) + f" Amount of Members: {combined_members}", target = 'output1')
+Days = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') #tuple
 
-
-
+display(f'hello! My name is {fullname}. I am {ag3_s} years old. I am {Height} centimeters. Three countries that I would want to visit are {Countries}. Heres some information about me, {Information}. My favorite fruits are {Fruits}. The seven days of the week are {Days}', target="result" )
